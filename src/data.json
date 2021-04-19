@@ -6,7 +6,7 @@
         "title": "Dress 1",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
         "availableSizes": ["X", "L", "XL", "XXL"],
-        "price": 29.9
+        "price": 290.9
       },
       {
         "_id": "dress2",
@@ -14,7 +14,7 @@
         "title": "Dress 2 ",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
         "availableSizes": ["X", "M", "L"],
-        "price": 18.9
+        "price": 318.9
       },
       {
         "_id": "dress3",
@@ -22,7 +22,7 @@
         "title": "Dress 3",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
         "availableSizes": ["X", "M", "L"],
-        "price": 14.9
+        "price": 414.9
       },
       {
         "_id": "dress4",
@@ -30,7 +30,7 @@
         "title": "Dress 4",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
         "availableSizes": ["XL"],
-        "price": 25.9
+        "price": 225.9
       },
       {
         "_id": "dress5",
@@ -38,7 +38,7 @@
         "title": "Dress 5",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
         "availableSizes": ["X", "L", "XL"],
-        "price": 10.9
+        "price": 410.9
       },
       {
         "_id": "dress6",
@@ -46,7 +46,7 @@
         "title": "Dress 6",
         "description": "This is for all the latest trends, no matter who you are, where you’re from and what you’re up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
         "availableSizes": ["XL", "XXL"],
-        "price": 49.9
+        "price": 549.9
       }
     ]
   }

@@ -12,7 +12,10 @@ class App extends React.Component {
 
     this.state = {
       products: data.products,
-      cartItems: [],
+      // cartItems: [],
+      cartItems: JSON.parse(localStorage.getItem("cartItems"))
+        ? JSON.parse(localStorage.getItem("cartItems"))
+        : [],
       size: "",
       sort: "",
     };
@@ -37,6 +40,7 @@ class App extends React.Component {
     this.setState({
       cartItems: cartItems,
     });
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   };
 
   removeFromCart = (productToRemove) => {
@@ -55,6 +59,8 @@ class App extends React.Component {
         }),
       };
     });
+    const cartItems = this.state.cartItems.slice();
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   };
 
   sortProducts = (event) => {
@@ -98,11 +104,13 @@ class App extends React.Component {
     }
   };
 
+ 
+
   render() {
     return (
       <div className="grid-container">
         <header>
-          <a href="/">React Shopping Cart</a>
+          <a href="/">Cool Gadgets </a>
         </header>
 
         <main>
@@ -124,6 +132,7 @@ class App extends React.Component {
               <Cart
                 cartItems={this.state.cartItems}
                 removeFromCart={this.removeFromCart}
+                showCheckout={this.showCheckout}
               />
             </div>
           </div>
