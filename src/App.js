@@ -63,6 +63,10 @@ class App extends React.Component {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   };
 
+  createOrder = (order) => {
+    alert("Need to save " + order);
+  };
+
   sortProducts = (event) => {
     // console.log(event);
 
@@ -104,8 +108,6 @@ class App extends React.Component {
     }
   };
 
- 
-
   render() {
     return (
       <div className="grid-container">
@@ -133,6 +135,7 @@ class App extends React.Component {
                 cartItems={this.state.cartItems}
                 removeFromCart={this.removeFromCart}
                 showCheckout={this.showCheckout}
+                createOrder={this.createOrder}
               />
             </div>
           </div>

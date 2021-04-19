@@ -5,6 +5,9 @@ export default class Cart extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      name: "",
+      email: "",
+      address: "",
       showCheckout: false,
     };
   }
@@ -17,8 +20,27 @@ export default class Cart extends Component {
     // console.log(this.state.showCheckout);
   };
 
-  createOrder = () => {
-    console.log("test");
+  createOrder = (e) => {
+    // console.log("test");
+    e.preventDefault();
+
+    const order = {
+      name: this.state.name,
+      email: this.state.email,
+      address: this.state.address,
+      cartItems: this.props.cartItems,
+    };
+
+    // console.log(order);
+    this.props.createOrder(order);
+  };
+
+  handleInput = (e) => {
+    // console.log(e);
+
+    this.setState({
+      [e.target.name]: e.target.value,
+    });
   };
 
   render() {
@@ -72,37 +94,43 @@ export default class Cart extends Component {
             </div>
             {this.state.showCheckout && (
               <div className="cart">
-                <ul className="form-container">
-                  <li>
-                    <label htmlFor="email">Email</label>
-                    <input
-                      name="email"
-                      type="email"
-                      required
-                      onChange={this.handleInput}
-                    />
-                  </li>
+                <form onSubmit={this.createOrder}>
+                  <ul className="form-container">
+                    <li>
+                      <label htmlFor="email">Email</label>
+                      <input
+                        name="email"
+                        type="email"
+                        required
+                        onChange={this.handleInput}
+                      />
+                    </li>
 
-                  <li>
-                    <label htmlFor="text">Name</label>
-                    <input
-                      name="name"
-                      type="text"
-                      required
-                      onChange={this.handleInput}
-                    />
-                  </li>
+                    <li>
+                      <label htmlFor="text">Name</label>
+                      <input
+                        name="name"
+                        type="text"
+                        required
+                        onChange={this.handleInput}
+                      />
+                    </li>
 
-                  <li>
-                    <label htmlFor="address">Adress</label>
-                    <input
-                      name="address"
-                      type="text"
-                      required
-                      onChange={this.handleInput}
-                    />
-                  </li>
-                </ul>
+                    <li>
+                      <label htmlFor="address">Adress</label>
+                      <input
+                        name="address"
+                        type="text"
+                        required
+                        onChange={this.handleInput}
+                      />
+                    </li>
+
+                    <li>
+                      <button className="button primary">Checkout</button>
+                    </li>
+                  </ul>
+                </form>
               </div>
             )}
           </div>
